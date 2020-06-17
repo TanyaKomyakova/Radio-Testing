@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
+    Radio radio = new Radio(10,100);
 
     @Test
     public void testSwitchingTheRadioStationToTheNext(){ //Переключение радиостанции на следующую и проверка границы
-        Radio radio = new Radio(10,100);
         radio.setCurrentRadioStation(9);
         radio.switchingTheRadioStationToTheNext();
         radio.switchingTheRadioStationToTheNext();
@@ -19,7 +19,6 @@ class RadioTest {
 
     @Test
     public void testSwitchingTheRadioStationToThePreviousOne(){ //Переключение радиостанции на предыдущую и проверка границы
-        Radio radio = new Radio(10,100);
         radio.setCurrentRadioStation(1);
         radio.switchingTheRadioStationToThePreviousOne();
         radio.switchingTheRadioStationToThePreviousOne();
@@ -30,7 +29,6 @@ class RadioTest {
 
     @Test
     public void radioStationSelection(){ // Выбор радиостанции
-        Radio radio = new Radio(10,100);
         radio.setCurrentRadioStation(7);
         radio.setCurrentRadioStation(11);
         int expected = 7;
@@ -40,7 +38,6 @@ class RadioTest {
 
     @Test
     public void radioStationSelection2() {// Выбор радиостанции
-        Radio radio = new Radio(10,100);
         radio.setCurrentRadioStation(0);
         radio.setCurrentRadioStation(-1);
         int expected = 0;
@@ -50,7 +47,6 @@ class RadioTest {
 
     @Test
     public void increaseSoundVolume() { // Увеличение громкости
-        Radio radio = new Radio(10,100);
         radio.setCurrentSoundVolume(99);
         radio.increaseSoundVolume();
         radio.increaseSoundVolume();
@@ -61,7 +57,6 @@ class RadioTest {
 
     @Test
     public void decreaseSoundVolume(){ // Уменьшение громкости
-        Radio radio = new Radio(10,100);
         radio.setCurrentSoundVolume(1);
         radio.decreaseSoundVolume();
         radio.decreaseSoundVolume();
@@ -72,7 +67,6 @@ class RadioTest {
 
     @Test
     public void soundVolumeSelection() { // Выбор громкости звука
-        Radio radio = new Radio(10,100);
         radio.setCurrentSoundVolume(87);
         radio.setCurrentSoundVolume(113);
         int expected = 87;
@@ -82,7 +76,6 @@ class RadioTest {
 
     @Test
     public void soundVolumeSelection2() { // Выбор громкости звука
-        Radio radio = new Radio(10,100);
         radio.setCurrentSoundVolume(4);
         radio.setCurrentSoundVolume(-12);
         int expected = 4;
