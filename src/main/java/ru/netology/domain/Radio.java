@@ -1,5 +1,8 @@
 package ru.netology.domain;
 
+import lombok.Data;
+
+@Data
 public class Radio {
     private String name = "Panasonic";
     private int currentRadioStation;
@@ -44,18 +47,6 @@ public class Radio {
         currentSoundVolume--;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
     public void setCurrentRadioStation(int currentRadioStation) {
         if (currentRadioStation > maxRadioStation){
             return;
@@ -64,26 +55,6 @@ public class Radio {
             return;
         }
         this.currentRadioStation = currentRadioStation;
-    }
-
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
-    }
-
-    public void setMinRadioStation(int minRadioStation) {
-        this.minRadioStation = minRadioStation;
-    }
-
-    public int getCurrentSoundVolume() {
-        return currentSoundVolume;
     }
 
     public void setCurrentSoundVolume(int currentSoundVolume) {
@@ -96,19 +67,4 @@ public class Radio {
         this.currentSoundVolume = currentSoundVolume;
     }
 
-    public int getMaxSoundVolume() {
-        return maxSoundVolume;
-    }
-
-    public void setMaxSoundVolume(int maxSoundVolume) {
-        this.maxSoundVolume = maxSoundVolume;
-    }
-
-    public int getMinSoundVolume() {
-        return minSoundVolume;
-    }
-
-    public void setMinSoundVolume(int minSoundVolume) {
-        this.minSoundVolume = minSoundVolume;
-    }
 }
