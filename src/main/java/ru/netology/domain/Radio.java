@@ -1,7 +1,8 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+@AllArgsConstructor
 @Data
 public class Radio {
     private String name = "Panasonic";
@@ -12,10 +13,6 @@ public class Radio {
     private int maxSoundVolume = 10;
     private int minSoundVolume = 0;
 
-    public Radio(int maxRadioStation, int maxSoundVolume) {
-        this.maxRadioStation = maxRadioStation;
-        this.maxSoundVolume = maxSoundVolume;
-    }
 
     public void switchingTheRadioStationToTheNext() {
         if (currentRadioStation >= maxRadioStation) {

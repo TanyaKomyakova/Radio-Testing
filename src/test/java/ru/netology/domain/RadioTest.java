@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-    Radio radio = new Radio(10,100);
+    Radio radio = new Radio("LG",9,10,0,15,100,0);
 
     @Test
     public void testSwitchingTheRadioStationToTheNext(){ //Переключение радиостанции на следующую и проверка границы
